@@ -1,0 +1,16 @@
+router.route('/users').get(user.listUsers).post(user.newUser);
+router.route('/users/:id').get(user.getUser);
+router.route('/users/:id/edit').post(user.editUser);
+router.route('/users/:id/delete').post(user.deleteUser);
+router.route('/companies').get(company.listCompanies).post(company.newCompany);
+router.route('/companies/:id').get(company.getCompany);
+router.route('/companies/:id/delete').post(company.deleteCompany);
+router.route('/companies/:id/edit').post(company.editCompany);
+router.route('/companies/:id/users').get(company.getCompanyUsers);
+router.route('/companies/:id/departments').get(company.getCompanyDepartments);
+router.route('/departments').get(department.listDepartments).post(department.newDepartment);
+router.route('/departments/:id').get(department.getDepartment);
+router.route('/departments/:id/delete').post(department.deleteDepartment);
+router.route('/departments/:id/edit').post(department.editDepartment);
+router.route('/departments/:id/users').post(department.getDepartmentUsers);
+router.route('/departments/:id/users/log').post(function(req,res,next){ /*controller code in here*/ });

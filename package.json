@@ -1,0 +1,14 @@
+{
+  "name": "appitecture",
+  "version": "1.0.0",
+  "description": "....",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RI-AJ",
+  "license": "ISC",
+  "preferGlobal": true,
+  "bin": {
+    "appitecture": "index.js"
+  }
+}

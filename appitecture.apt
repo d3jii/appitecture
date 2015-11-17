@@ -1,0 +1,18 @@
+use router.route
+createcontrollerfunctions yes
+/users (yyt.uiyui, #)get:user.listUsers,post:user.newUser
+	/:id get:user.getUser
+		/edit post:user.editUser
+		/delete post:user.deleteUser
+/companies get:company.listCompanies,post:company.newCompany
+	/:id get:company.getCompany
+		/delete post:company.deleteCompany
+		/edit post:company.editCompany
+		/users get:company.getCompanyUsers
+		/departments get:company.getCompanyDepartments
+/departments get:department.listDepartments,post:department.newDepartment
+	/:id get:department.getDepartment
+		/delete post:department.deleteDepartment
+		/edit post:department.editDepartment
+		/users post:department.getDepartmentUsers
+			/log post
