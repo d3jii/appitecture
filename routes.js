@@ -1,16 +1,1 @@
-router.route('/users').get(user.listUsers).post(user.newUser);
-router.route('/users/:id').get(user.getUser);
-router.route('/users/:id/edit').post(user.editUser);
-router.route('/users/:id/delete').post(user.deleteUser);
-router.route('/companies').get(company.listCompanies).post(company.newCompany);
-router.route('/companies/:id').get(company.getCompany);
-router.route('/companies/:id/delete').post(company.deleteCompany);
-router.route('/companies/:id/edit').post(company.editCompany);
-router.route('/companies/:id/users').get(company.getCompanyUsers);
-router.route('/companies/:id/departments').get(company.getCompanyDepartments);
-router.route('/departments').get(department.listDepartments).post(department.newDepartment);
-router.route('/departments/:id').get(department.getDepartment);
-router.route('/departments/:id/delete').post(department.deleteDepartment);
-router.route('/departments/:id/edit').post(department.editDepartment);
-router.route('/departments/:id/users').post(department.getDepartmentUsers);
-router.route('/departments/:id/users/log').post(function(req,res,next){ /*controller code in here*/ });
+[{"path":"/users","methods":[{"type":"get","controller":"user.listUsers","filename":"user","middlewares":["yyt.uiyui","#"]},{"type":"post","controller":"user.newUser","filename":"user","middlewares":[]}]},{"path":"/users/:id","methods":[{"type":"get","controller":"user.getUser","filename":"user","middlewares":[]}]},{"path":"/users/:id/edit","methods":[{"type":"post","controller":"user.editUser","filename":"user","middlewares":[]}]},{"path":"/users/:id/delete","methods":[{"type":"post","controller":"user.deleteUser","filename":"user","middlewares":[]}]},{"path":"/companies","methods":[{"type":"get","controller":"company.listCompanies","filename":"company","middlewares":[]},{"type":"post","controller":"company.newCompany","filename":"company","middlewares":[]}]},{"path":"/companies/:id","methods":[{"type":"get","controller":"company.getCompany","filename":"company","middlewares":[]}]},{"path":"/companies/:id/delete","methods":[{"type":"post","controller":"company.deleteCompany","filename":"company","middlewares":[]}]},{"path":"/companies/:id/edit","methods":[{"type":"post","controller":"company.editCompany","filename":"company","middlewares":[]}]},{"path":"/companies/:id/users","methods":[{"type":"get","controller":"company.getCompanyUsers","filename":"company","middlewares":[]}]},{"path":"/companies/:id/departments","methods":[{"type":"get","controller":"company.getCompanyDepartments","filename":"company","middlewares":[]}]},{"path":"/departments","methods":[{"type":"get","controller":"department.listDepartments","filename":"department","middlewares":[]},{"type":"post","controller":"department.newDepartment","filename":"department","middlewares":[]}]},{"path":"/departments/:id","methods":[{"type":"get","controller":"department.getDepartment","filename":"department","middlewares":[]}]},{"path":"/departments/:id/delete","methods":[{"type":"post","controller":"department.deleteDepartment","filename":"department","middlewares":[]}]},{"path":"/departments/:id/edit","methods":[{"type":"post","controller":"department.editDepartment","filename":"department","middlewares":[]}]},{"path":"/departments/:id/users","methods":[{"type":"post","controller":"department.getDepartmentUsers","filename":"department","middlewares":[]}]},{"path":"/departments/:id/users/log","methods":[{"type":"post","filename":"","middlewares":[]}]}]

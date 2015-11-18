@@ -1,6 +1,6 @@
 use router.route
 createcontrollerfunctions yes
-/users (yyt.uiyui, #)get:user.listUsers,post:user.newUser
+/users (yyt.uiyui #)get:user.listUsers,post:user.newUser
 	/:id get:user.getUser
 		/edit post:user.editUser
 		/delete post:user.deleteUser

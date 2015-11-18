@@ -10,7 +10,27 @@ var dir = './tmp';
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
+
+{
+
+    text: ""
+
+    grammer: "",
+
+    parser: () returns path, methods:[{type:, filename:'', method:'', middlewares:[""]}]
+}
+
+
 */
+
+var appitecture = {
+	text:"",
+	grammar:"",
+	config_lines:2,
+	parser:function(){}
+}
+
+
 function create_controller_function(functionname,optional_generate_controller_object){
 	//Split functionname, remove the controller name .. user.getUsers == getUsers()
 	functionname = functionname.split('.');

@@ -1,0 +1,1 @@
+- Change middleware grammar to use comma separation.
