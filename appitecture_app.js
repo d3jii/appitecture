@@ -11,15 +11,16 @@ var appitecture = {
 		indentation:/\t/g,
 	},
 	config_lines:2,
-	parser:null
+	parser:parseData
 }
-appitecture.text = data.toString();  
-/*[{path,methods:[{type,filename,method,middlewares:[]}]}]*/
+appitecture.text = data.toString();   
 
-function getTokens(text){
+function parseData(){
+	function getTokens(text){
 	return text.split('\n');
 }
-var parsed_data = [];
+
+	var parsed_data = [];
 line_tokens = getTokens(appitecture.text);
 var config_tokens = line_tokens.splice(0,appitecture.config_lines);
 //Get the method_wrapper to use // use app.route .. returns app.route
@@ -88,5 +89,7 @@ function line_tokens_foreach_callback(line_token){
 	}
 }
 line_tokens.forEach(line_tokens_foreach_callback);
-//console.log(parsed_data);
-fs.writeFileSync("routes.js",JSON.stringify(parsed_data));
+return parsed_data;
+}
+
+fs.writeFileSync("routes.js",JSON.stringify(appitecture.parser()));
