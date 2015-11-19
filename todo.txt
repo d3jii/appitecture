@@ -1,1 +1,2 @@
 - Change middleware grammar to use comma separation.
+- Include commander https://www.npmjs.com/package/commander package to handler cli arguments
