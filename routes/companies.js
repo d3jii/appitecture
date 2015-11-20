@@ -1,6 +1,6 @@
-app.get('/companies',company.listCompanies).post('/companies',company.newCompany);
-app.get('/companies/:id',company.getCompany);
-app.post('/companies/:id/delete',company.deleteCompany);
-app.post('/companies/:id/edit',company.editCompany);
-app.get('/companies/:id/users',company.getCompanyUsers);
-app.get('/companies/:id/departments',company.getCompanyDepartments);
+app.route('/companies').get(company.listCompanies).post(company.newCompany);
+app.route('/companies/:id').get(company.getCompany);
+app.route('/companies/:id/delete').post(company.deleteCompany);
+app.route('/companies/:id/edit').post(company.editCompany);
+app.route('/companies/:id/users').get(company.getCompanyUsers);
+app.route('/companies/:id/departments').get(company.getCompanyDepartments);
