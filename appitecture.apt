@@ -16,3 +16,4 @@ createcontrollerfunctions yes
 		/edit post:department.editDepartment
 		/users post:department.getDepartmentUsers
 			/log post
+			/gameone post:department.getJar,get:department.loadAll
