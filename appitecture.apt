@@ -1,6 +1,13 @@
-use app.get
+use app.route
 createcontrollerfunctions yes
-/users (yyt.uiyui #)get:user.listUsersr,post:user.newUser
+/chats get:chat.listChats
+	/:roomid get:chat.getRoomChats,post:chat.newRoomChatMessage
+	/:userid get:chat.getUserChatMessages
+	/:messageid get:chat.getChatMessage
+		/edit post:chat.editMessage
+		/delete post:chat.deleteMessage
+			/undo post:chat.undoDelete
+/users (yyt.uiyui #)get:user.listUser,post:user.newUser
 	/:id get:user.getUser
 		/edit post:user.editUser
 		/delete post:user.deleteUser
