@@ -1,9 +1,9 @@
-router.route('/departments').get(department.listDepartments).post(department.newDepartment);
-router.route('/departments/:id').get(department.getDepartment);
-router.route('/departments/:id/delete').post(department.deleteDepartment);
-router.route('/departments/:id/edit').post(department.editDepartment);
-router.route('/departments/:id/users').post(department.getDepartmentUsers);
-router.route('/departments/:id/users/log').post(function(req,res,next){
+app.get('/departments',department.listDepartments).post('/departments',department.newDepartment);
+app.get('/departments/:id',department.getDepartment);
+app.post('/departments/:id/delete',department.deleteDepartment);
+app.post('/departments/:id/edit',department.editDepartment);
+app.post('/departments/:id/users',department.getDepartmentUsers);
+app.post('/departments/:id/users/log',function(req,res,next){
  /*code goes in here*/ 
 });
-router.route('/departments/:id/users/gameone').post(department.getJar).get(department.loadAll);
+app.post('/departments/:id/users/gameone',department.getJar).get('/departments/:id/users/gameone',department.loadAll);

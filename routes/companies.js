@@ -1,6 +1,6 @@
-router.route('/companies').get(company.listCompanies).post(company.newCompany);
-router.route('/companies/:id').get(company.getCompany);
-router.route('/companies/:id/delete').post(company.deleteCompany);
-router.route('/companies/:id/edit').post(company.editCompany);
-router.route('/companies/:id/users').get(company.getCompanyUsers);
-router.route('/companies/:id/departments').get(company.getCompanyDepartments);
+app.get('/companies',company.listCompanies).post('/companies',company.newCompany);
+app.get('/companies/:id',company.getCompany);
+app.post('/companies/:id/delete',company.deleteCompany);
+app.post('/companies/:id/edit',company.editCompany);
+app.get('/companies/:id/users',company.getCompanyUsers);
+app.get('/companies/:id/departments',company.getCompanyDepartments);
