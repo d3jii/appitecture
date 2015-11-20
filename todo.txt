@@ -1,3 +1,5 @@
 - Change middleware grammar to use comma separation.
 - Include commander https://www.npmjs.com/package/commander package to handler cli arguments
+- Robust error handling. Dir / File not found esp.
+- File refactoring module
 ---- https://developer.atlassian.com/blog/2015/11/scripting-with-node/?utm_source=nodeweekly&utm_medium=email
