@@ -1,4 +1,3 @@
-
 var fs = require("fs"),
 	appitecture = require("./lib/a.js").appitecture; 
 var data = fs.readFileSync("appitecture.apt");
