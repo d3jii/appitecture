@@ -10,6 +10,10 @@ appitecture.text = data.toString();
 var appi_data = appitecture.parser();
 var parsed_data = appi_data.parsed_data;
 appitecture.route_parser(parsed_data,appitecture.config_options,appi_data.controllers_dictionary);
+
+if(appitecture.config_options.create_controller_functions == "yes"){
+appitecture.controller_parser(appi_data.controllers_dictionary,parsed_data);
+}
 fs.writeFileSync("routes.js",JSON.stringify(parsed_data));
 }
 else{
