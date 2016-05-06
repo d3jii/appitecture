@@ -28,5 +28,6 @@ Appitecture is a simple nodejs module that helps scaffold project route handlers
 - Few notes:
 	- Controller handlers are optional. In such cases, routes are specified like so: `/route httpmethod` (this creates an anonymous function in the route definition) ![alt text](https://farm8.staticflickr.com/7376/26756535052_2cf4e3b31e_b.jpg "Appitecture.apt") 
 	- When specifying middlewares, a # indicates that an anonymous function be created inline e.g. `/users (yyt.uiyui #)get:user.listUser` 
+
 ![alt text](https://farm8.staticflickr.com/7533/26245962753_c166ece7c3_b.jpg "Appitecture.apt")
 
