@@ -15,6 +15,7 @@ if(appitecture.config_options.create_controller_functions == "yes"){
 appitecture.controller_parser(appi_data.controllers_dictionary,parsed_data);
 }
 fs.writeFileSync("routes.js",JSON.stringify(parsed_data));
+console.log("App structure created");
 }
 else{
 	console.log("No appitecture.apt file found in current directory");
